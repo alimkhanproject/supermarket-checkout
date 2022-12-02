@@ -149,12 +149,10 @@ function remove_cart_item(cart_item_id)
     dataType:'json',
     success:function(response)
     {
-    $("#tr_row_id"+cart_item_id).remove();
+        $("#tr_row_id"+cart_item_id).remove();
 
-    $("#sub_total").html(response.sub_total);
-    $("#total_gst").html(response.total_gst);
-
-    $("#total").html(response.total);
+        $("#sub_total").html('$'+response.total);
+        $("#total").html('$'+response.total);        
 
     }
 

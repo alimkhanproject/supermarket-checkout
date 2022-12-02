@@ -196,13 +196,9 @@ class Cart extends MY_Controller {
 
       $this->cart->update($data);
 
-      $total_items = count($this->cart->contents());
+      $total = getTotalPrice();
 
-      $sub_total = $this->cart->total();
-      
-      $total = $sub_total;
-
-      $json_data = array('status'=>1, 'total_items'=>$total_items, 'sub_total'=>number_format($sub_total, 2, '.', ''), 'total'=>number_format($total, 2, '.', ''));
+      $json_data = array('status'=>1, 'total'=>number_format($total, 2, '.', ''));
 
       echo json_encode($json_data);
       exit;
