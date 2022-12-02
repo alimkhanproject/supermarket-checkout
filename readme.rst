@@ -1,3 +1,3 @@
 ###################
-What is Supermarket Checkout
+Supermarket Checkout
 ###################
